@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import {Mail, Github, Linkedin, Instagram } from 'lucide-astro'
 
 const name = "Bennett Logan";
 const title = "Developer";
@@ -12,9 +13,9 @@ const description = "There are no large actions, only the culmination of numerou
 		<div class="nav-container">
 			<a href="/" class="logo">{name}</a>
 			<div class="nav-links">
-				<a href="#about">about</a>
-				<a href="#projects">projects</a>
-				<a href="#contact">contact</a>
+				<a href="#about">About</a>
+				<a href="#projects">Projects</a>
+				<a href="#contact">Contact</a>
 			</div>
 		</div>
 	</nav>
@@ -46,8 +47,15 @@ const description = "There are no large actions, only the culmination of numerou
 					Montana, the last place you would expect a developer to live.
 				</p>
 				<p>
-					When I'm not coding, you can find me exploring new technologies,
-					contributing to open source, or enjoying a good cup of coffee.
+					I love to program, but I also love photography. Being in Montana, I have no
+					shortage of subjects to photograph. My dream is someday combine the two somehow, but
+					that has yet to be discovered.
+				</p>
+				<p>
+					When I'm not coding or photographing, I love to spend my time outside.
+					I backpack often, build bush craft shelters, and even lived in a tent for a job!
+					I even have a Youtube channel dedicated to outdoor things!
+					Check out my channel <a href="https://www.youtube.com/@Everyday_Outdoors">here!</a>
 				</p>
 				<div class="skills">
 					<h3>Skills</h3>
@@ -56,7 +64,9 @@ const description = "There are no large actions, only the culmination of numerou
 						<span class="tag">Python</span>
 						<span class="tag">C++</span>
 						<span class="tag">C</span>
-						<span class="tag">Astro</span>
+						<span class="tag">Kotlin</span>
+						<span class="tag">HTML</span>
+						<span class="tag">CSS</span>
 						<span class="tag">Git</span>
 					</div>
 				</div>
@@ -73,58 +83,58 @@ const description = "There are no large actions, only the culmination of numerou
 			<div class="projects-grid">
 				<article class="project-card">
 					<div class="project-header">
-						<h3>Project One</h3>
-						<span class="project-year">2024</span>
+						<h3>CatScript Compiler</h3>
+						<span class="project-year">2025</span>
 					</div>
 					<p class="project-description">
-						A modern web application built with cutting-edge technologies.
-						Features include real-time updates and responsive design.
+						A recursive-descent compiler for the low-functionality
+						language CatScript.
+					</p>
+					<p class="project-description">
+						This was my capstone project to graduate
+						from college!
 					</p>
 					<div class="project-tech">
-						<span class="tech-tag">React</span>
-						<span class="tech-tag">Node.js</span>
+						<span class="tech-tag">Java</span>
 					</div>
 					<div class="project-links">
 						<a href="#" class="project-link">View Project →</a>
-						<a href="#" class="project-link">GitHub →</a>
 					</div>
 				</article>
 
 				<article class="project-card">
 					<div class="project-header">
-						<h3>Project Two</h3>
-						<span class="project-year">2024</span>
-					</div>
-					<p class="project-description">
-						An elegant solution to a complex problem. Built with performance
-						and user experience in mind.
-					</p>
-					<div class="project-tech">
-						<span class="tech-tag">Astro</span>
-						<span class="tech-tag">TypeScript</span>
-					</div>
-					<div class="project-links">
-						<a href="#" class="project-link">View Project →</a>
-						<a href="#" class="project-link">GitHub →</a>
-					</div>
-				</article>
-
-				<article class="project-card">
-					<div class="project-header">
-						<h3>Project Three</h3>
-						<span class="project-year">2023</span>
+						<h3>Photography Website</h3>
+						<span class="project-year">2025</span>
 					</div>
 					<p class="project-description">
 						A creative portfolio showcasing photography and design work with
 						smooth animations and transitions.
 					</p>
 					<div class="project-tech">
-						<span class="tech-tag">CSS</span>
 						<span class="tech-tag">JavaScript</span>
+						<span class="tech-tag">HTML</span>
+						<span class="tech-tag">CSS</span>
 					</div>
 					<div class="project-links">
 						<a href="#" class="project-link">View Project →</a>
-						<a href="#" class="project-link">GitHub →</a>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="project-header">
+						<h3>Machine Learning Library</h3>
+						<span class="project-year">2024</span>
+					</div>
+					<p class="project-description">
+						A recreation of multiple different Scikit-learn
+						libraries for machine learning.
+					</p>
+					<div class="project-tech">
+						<span class="tech-tag">Python</span>
+					</div>
+					<div class="project-links">
+						<a href="https://github.com/iforgotmylogin/MachineLearning" class="project-link">View Project →</a>
 					</div>
 				</article>
 			</div>
@@ -135,7 +145,7 @@ const description = "There are no large actions, only the culmination of numerou
 	<section class="section" id="contact">
 		<div class="container">
 			<h2 class="section-title">
-				<span class="prompt">$</span> get-in-touch
+				Contact
 			</h2>
 			<div class="contact-content">
 				<p class="contact-text">
@@ -143,17 +153,21 @@ const description = "There are no large actions, only the culmination of numerou
 					to reach out!
 				</p>
 				<div class="contact-links">
-					<a href="mailto:your.email@example.com" class="contact-link">
-						📧 Email
+					<a href="mailto:bgblogan03@gmail.com" class="contact-link">
+						<Mail size={20} />
+						<span>Mail</span>
 					</a>
-					<a href="https://github.com/yourusername" class="contact-link">
-						🐙 GitHub
+					<a href="https://github.com/iforgotmylogin" class="contact-link">
+						<Github size={20} />
+						<span>Github</span>
 					</a>
-					<a href="https://linkedin.com/in/yourusername" class="contact-link">
-						💼 LinkedIn
+					<a href="https://linkedin.com/in/ben-logan-cs/" class="contact-link">
+						<Linkedin size={20} />
+						<span>LinkedIn</span>
 					</a>
-					<a href="https://twitter.com/yourusername" class="contact-link">
-						🐦 Twitter
+					<a href="https://www.instagram.com/notbenlogan/" class="contact-link">
+						<Instagram size ={20} />
+						<span>Instagram</span>
 					</a>
 				</div>
 			</div>
@@ -163,7 +177,7 @@ const description = "There are no large actions, only the culmination of numerou
 	<!-- Footer -->
 	<footer class="footer">
 		<div class="container">
-			<p>© 2024 {name}. Built with Astro.</p>
+			<p>© 2025 {name}. Built with Astro.</p>
 		</div>
 	</footer>
 </Layout>
