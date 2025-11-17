@@ -14,8 +14,8 @@ const description = "There are no large actions, only the culmination of numerou
 			<a href="/" class="logo">{name}</a>
 			<div class="nav-links">
 				<a href="#about">About</a>
-				<a href="#projects">Projects</a>
-				<a href="#contact">Contact</a>
+				<a href="/projects/">Projects</a>
+				<a href="/contact">Contact</a>
 			</div>
 		</div>
 	</nav>
@@ -65,6 +65,7 @@ const description = "There are no large actions, only the culmination of numerou
 						<span class="tag">C++</span>
 						<span class="tag">C</span>
 						<span class="tag">Kotlin</span>
+						<span class="tag">Swift</span>
 						<span class="tag">HTML</span>
 						<span class="tag">CSS</span>
 						<span class="tag">Git</span>
@@ -81,7 +82,7 @@ const description = "There are no large actions, only the culmination of numerou
 				Projects
 			</h2>
 			<div class="projects-grid">
-				<article class="project-card">
+				<article class="project-card" onclick="window.location.href='#'">
 					<div class="project-header">
 						<h3>CatScript Compiler</h3>
 						<span class="project-year">2025</span>
@@ -102,7 +103,7 @@ const description = "There are no large actions, only the culmination of numerou
 					</div>
 				</article>
 
-				<article class="project-card">
+				<article class="project-card" onclick="window.location.href='#'">
 					<div class="project-header">
 						<h3>Photography Website</h3>
 						<span class="project-year">2025</span>
@@ -121,7 +122,7 @@ const description = "There are no large actions, only the culmination of numerou
 					</div>
 				</article>
 
-				<article class="project-card">
+				<article class="project-card" onclick="window.location.href='https://github.com/iforgotmylogin/MachineLearning'">
 					<div class="project-header">
 						<h3>Machine Learning Library</h3>
 						<span class="project-year">2024</span>
@@ -137,37 +138,10 @@ const description = "There are no large actions, only the culmination of numerou
 						<a href="https://github.com/iforgotmylogin/MachineLearning" class="project-link">View Project →</a>
 					</div>
 				</article>
-			</div>
-		</div>
-	</section>
 
-	<!-- Contact Section -->
-	<section class="section" id="contact">
-		<div class="container">
-			<h2 class="section-title">
-				Contact
-			</h2>
-			<div class="contact-content">
-				<p class="contact-text">
-					I'm always open to new opportunities and collaborations. Feel free
-					to reach out!
-				</p>
-				<div class="contact-links">
-					<a href="mailto:bgblogan03@gmail.com" class="contact-link">
-						<Mail size={20} />
-						<span>Mail</span>
-					</a>
-					<a href="https://github.com/iforgotmylogin" class="contact-link">
-						<Github size={20} />
-						<span>Github</span>
-					</a>
-					<a href="https://linkedin.com/in/ben-logan-cs/" class="contact-link">
-						<Linkedin size={20} />
-						<span>LinkedIn</span>
-					</a>
-					<a href="https://www.instagram.com/notbenlogan/" class="contact-link">
-						<Instagram size ={20} />
-						<span>Instagram</span>
+				<div class="view-all-projects">
+					<a href="/projects" class="btn btn-primary">
+						View All Projects →
 					</a>
 				</div>
 			</div>
@@ -177,7 +151,23 @@ const description = "There are no large actions, only the culmination of numerou
 	<!-- Footer -->
 	<footer class="footer">
 		<div class="container">
-			<p>© 2025 {name}. Built with Astro.</p>
+			<div class="footer-content">
+				<p class="footer-text">© 2025 {name}. Built with Astro.</p>
+				<div class="footer-links">
+					<a href="mailto:bgblogan03@gmail.com" class="footer-link">
+						<Mail size={18} />
+					</a>
+					<a href="https://github.com/iforgotmylogin" class="footer-link">
+						<Github size={18} />
+					</a>
+					<a href="https://linkedin.com/in/ben-logan-cs/" class="footer-link">
+						<Linkedin size={18} />
+					</a>
+					<a href="https://www.instagram.com/notbenlogan/" class="footer-link">
+						<Instagram size ={18} />
+					</a>
+				</div>
+			</div>
 		</div>
 	</footer>
 </Layout>

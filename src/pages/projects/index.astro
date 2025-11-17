@@ -1,0 +1,481 @@
+---
+// projects/index.astro - Individual project sections (no loop)
+import Layout from '../../layouts/Layout.astro';
+import {ExternalLink, Github, Instagram, Linkedin, Mail} from 'lucide-astro';
+
+const name = "Bennett Logan";
+---
+
+<Layout title={`Projects - ${name}`} description="All my projects and work">
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="logo">Bennett Logan</a>
+            <div class="nav-links">
+                <a href="/#about">About</a>
+                <a href="/projects">Projects</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Container -->
+    <main class="projects-container">
+
+        <!-- Project 1 - Has both live demo and GitHub -->
+        <section class="project-section">
+            <div class="project-background" style="background-image: url('/images/mountain.jpg')"></div>
+
+            <div class="project-content">
+                <div class="project-info">
+                    <div class="project-meta">
+                        <span class="project-number">01</span>
+                        <span class="project-year">2025</span>
+                    </div>
+
+                    <h2 class="project-title">UI/UX Design Project</h2>
+
+                    <p class="project-description">
+                        I was tasked with coming up with an idea and designing an application. In this project, I decided
+                        to focus on an application that makes users aware of their doom scrolling habits. Using design
+                        principles and research, I made a mock-up of the application and explained my process in great
+                        detail.
+                    </p>
+
+                    <div class="project-tech">
+                        <span class="tech-badge">Figma</span>
+                        <span class="tech-badge">AdobeExpress</span>
+                        <span class="tech-badge">MongoDB</span>
+                        <span class="tech-badge">Socket.io</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://project-one.com" class="project-btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <ExternalLink size={18} />
+                            <span>View Live</span>
+                        </a>
+                        <a href="https://github.com/yourusername/project-one" class="project-btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <Github size={18} />
+                            <span>Source Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 2 - Only has live demo, no GitHub -->
+        <section class="project-section">
+            <div class="project-background" style="background-image: url('/images/mountain.jpg')"></div>
+
+            <div class="project-content">
+                <div class="project-info">
+                    <div class="project-meta">
+                        <span class="project-number">02</span>
+                        <span class="project-year">2024</span>
+                    </div>
+
+                    <h2 class="project-title">Client Project</h2>
+
+                    <p class="project-description">
+                        A professional website built for a client. Clean design, fast performance, and optimized for conversions. Proprietary codebase.
+                    </p>
+
+                    <div class="project-tech">
+                        <span class="tech-badge">Astro</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">Tailwind CSS</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://client-project.com" class="project-btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <ExternalLink size={18} />
+                            <span>View Live</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 3 - Only has GitHub, not deployed -->
+        <section class="project-section">
+            <div class="project-background" style="background-image: url('/images/mountain.jpg')"></div>
+
+            <div class="project-content">
+                <div class="project-info">
+                    <div class="project-meta">
+                        <span class="project-number">03</span>
+                        <span class="project-year">2023</span>
+                    </div>
+
+                    <h2 class="project-title">Open Source Library</h2>
+
+                    <p class="project-description">
+                        A utility library for JavaScript developers. Published on npm and actively maintained. Used by developers worldwide.
+                    </p>
+
+                    <div class="project-tech">
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">Jest</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://github.com/yourusername/library" class="project-btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <Github size={18} />
+                            <span>Source Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 4 - Private project, no links -->
+        <section class="project-section">
+            <div class="project-background" style="background-image: url('/images/mountain.jpg')"></div>
+
+            <div class="project-content">
+                <div class="project-info">
+                    <div class="project-meta">
+                        <span class="project-number">04</span>
+                        <span class="project-year">2023</span>
+                    </div>
+
+                    <h2 class="project-title">Enterprise Dashboard</h2>
+
+                    <p class="project-description">
+                        Internal tool for a Fortune 500 company. Real-time analytics dashboard processing millions of data points. Under NDA - cannot share code or demo.
+                    </p>
+
+                    <div class="project-tech">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">D3.js</span>
+                        <span class="tech-badge">GraphQL</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                    </div>
+
+                    <!-- No buttons for private projects -->
+                    <p class="project-note" style="color: var(--text-secondary); font-style: italic; margin-top: 1rem;">
+                        * Private project under NDA
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 5 - Custom button text -->
+        <section class="project-section">
+            <div class="project-background" style="background-image: url('/images/mountain.jpg')"></div>
+
+            <div class="project-content">
+                <div class="project-info">
+                    <div class="project-meta">
+                        <span class="project-number">05</span>
+                        <span class="project-year">2022</span>
+                    </div>
+
+                    <h2 class="project-title">Case Study</h2>
+
+                    <p class="project-description">
+                        A comprehensive redesign of an e-commerce platform. Increased conversion rates by 40% and improved user satisfaction scores significantly.
+                    </p>
+
+                    <div class="project-tech">
+                        <span class="tech-badge">Next.js</span>
+                        <span class="tech-badge">Stripe</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="/projects/case-study" class="project-btn btn-primary">
+                            <ExternalLink size={18} />
+                            <span>Read Case Study</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-arrow">↓</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 {name}. Built with Astro.</p>
+                <div class="footer-links">
+                    <a href="mailto:bgblogan03@gmail.com" class="footer-link">
+                        <Mail size={18} />
+                    </a>
+                    <a href="https://github.com/iforgotmylogin" class="footer-link">
+                        <Github size={18} />
+                    </a>
+                    <a href="https://linkedin.com/in/ben-logan-cs/" class="footer-link">
+                        <Linkedin size={18} />
+                    </a>
+                    <a href="https://www.instagram.com/notbenlogan/" class="footer-link">
+                        <Instagram size ={18} />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</Layout>
+
+<style>
+    .projects-container {
+        padding-top: 70px;
+    }
+
+    .project-section {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 4rem 0;
+        overflow: hidden;
+    }
+
+    .project-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.3;
+        z-index: 1;
+    }
+
+    .project-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+                to bottom,
+                rgba(10, 10, 10, 0.85) 0%,
+                rgba(10, 10, 10, 0.92) 100%
+        );
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .project-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .project-info {
+        max-width: 800px;
+    }
+
+    .project-meta {
+        display: flex;
+        align-items: baseline;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        font-family: var(--font-mono);
+    }
+
+    .project-number {
+        font-size: 5rem;
+        font-weight: 700;
+        color: var(--accent);
+        line-height: 1;
+        opacity: 0.3;
+    }
+
+    .project-year {
+        font-size: 1rem;
+        color: var(--text-secondary);
+    }
+
+    .project-title {
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 1.5rem;
+        line-height: 1.1;
+    }
+
+    .project-description {
+        font-size: 1.15rem;
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 2.5rem;
+    }
+
+    .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 3rem;
+    }
+
+    .tech-badge {
+        padding: 0.5rem 1.25rem;
+        background-color: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        font-family: var(--font-mono);
+        transition: all 0.3s ease;
+    }
+
+    .tech-badge:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+    .project-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .project-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.875rem 1.75rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: var(--accent);
+        color: var(--bg-secondary);
+    }
+
+    .btn-primary:hover {
+        background-color: var(--accent-hover);
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        background-color: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        transform: translateY(-2px);
+    }
+
+    .scroll-indicator {
+        position: fixed;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        z-index: 100;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+
+    .scroll-arrow {
+        font-size: 1.5rem;
+        animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .projects-container {
+            padding-top: 80px;
+        }
+
+        .project-section {
+            padding: 3rem 0;
+            min-height: auto;
+        }
+
+        .project-content {
+            padding: 0 1.5rem;
+        }
+
+        .project-number {
+            font-size: 3rem;
+        }
+
+        .project-meta {
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-tech {
+            margin-bottom: 2rem;
+        }
+
+        .project-actions {
+            flex-direction: column;
+        }
+
+        .project-btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .scroll-indicator {
+            bottom: 2rem;
+        }
+    }
+</style>
+
+<script>
+    let scrolled = false;
+    window.addEventListener('scroll', () => {
+        if (!scrolled && window.scrollY > 100) {
+            scrolled = true;
+            const indicator = document.getElementById('scroll-indicator');
+            if (indicator) {
+                indicator.style.opacity = '0';
+                setTimeout(() => {
+                    indicator.style.display = 'none';
+                }, 300);
+            }
+        }
+    });
+</script>

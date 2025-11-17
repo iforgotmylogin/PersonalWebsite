@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {Mail, Github, Linkedin, Twitter, Instagram} from 'lucide-astro';
+
+const name = "Bennett Logan";
+---
+
+<Layout title={`Contact - ${name}`} description="Get in touch with me">
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="logo">{name}</a>
+            <div class="nav-links">
+                <a href="/#about">About</a>
+                <a href="/projects">Projects</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="section-title">
+                Contact Me
+            </h1>
+            <div class="contact-content">
+                <p class="contact-text">
+                    I'm always open to new opportunities and collaborations. Feel free to reach out!
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:your.email@example.com" class="contact-link">
+                        <Mail size={20} />
+                        <span>Email</span>
+                    </a>
+                    <a href="https://github.com/yourusername" class="contact-link">
+                        <Github size={20} />
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" class="contact-link">
+                        <Linkedin size={20} />
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://twitter.com/yourusername" class="contact-link">
+                        <Twitter size={20} />
+                        <span>Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 {name}. Built with Astro.</p>
+                <div class="footer-links">
+                    <a href="mailto:bgblogan03@gmail.com" class="footer-link">
+                        <Mail size={18} />
+                    </a>
+                    <a href="https://github.com/iforgotmylogin" class="footer-link">
+                        <Github size={18} />
+                    </a>
+                    <a href="https://linkedin.com/in/ben-logan-cs/" class="footer-link">
+                        <Linkedin size={18} />
+                    </a>
+                    <a href="https://www.instagram.com/notbenlogan/" class="footer-link">
+                        <Instagram size ={18} />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</Layout>
