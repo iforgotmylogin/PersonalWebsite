@@ -1,15 +1,169 @@
 ---
+import Layout from '../layouts/Layout.astro';
+
+const name = "Bennett Logan";
+const title = "Developer";
+const description = "There are no large actions, only the culmination of numerous small actions";
 ---
 
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<meta name="viewport" content="width=device-width" />
-	<meta name="generator" content={Astro.generator} >
-	<title>Astro</title>
-</head>
-<body>
-<h1>Astro</h1>
-</body>
-</html>
+<Layout title={`${name} - Portfolio`} description={description}>
+	<!-- Navigation -->
+	<nav class="nav">
+		<div class="nav-container">
+			<a href="/" class="logo">{name}</a>
+			<div class="nav-links">
+				<a href="#about">about</a>
+				<a href="#projects">projects</a>
+				<a href="#contact">contact</a>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="hero" id="home">
+		<div class="container">
+			<div class="hero-content">
+				<h1 class="typing-text">{name}</h1>
+				<p class="subtitle">{title}</p>
+				<p class="description">{description}</p>
+				<div class="cta-buttons">
+					<a href="#projects" class="btn btn-primary">View Projects</a>
+					<a href="#contact" class="btn btn-secondary">Get in Touch</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- About Section -->
+	<section class="section" id="about">
+		<div class="container">
+			<h2 class="section-title">
+				About
+			</h2>
+			<div class="about-content">
+				<p>
+					Hello! I am a developer who is currently going to college in
+					Montana, the last place you would expect a developer to live.
+				</p>
+				<p>
+					When I'm not coding, you can find me exploring new technologies,
+					contributing to open source, or enjoying a good cup of coffee.
+				</p>
+				<div class="skills">
+					<h3>Skills</h3>
+					<div class="skill-tags">
+						<span class="tag">Java</span>
+						<span class="tag">Python</span>
+						<span class="tag">C++</span>
+						<span class="tag">C</span>
+						<span class="tag">Astro</span>
+						<span class="tag">Git</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Projects Section -->
+	<section class="section" id="projects">
+		<div class="container">
+			<h2 class="section-title">
+				Projects
+			</h2>
+			<div class="projects-grid">
+				<article class="project-card">
+					<div class="project-header">
+						<h3>Project One</h3>
+						<span class="project-year">2024</span>
+					</div>
+					<p class="project-description">
+						A modern web application built with cutting-edge technologies.
+						Features include real-time updates and responsive design.
+					</p>
+					<div class="project-tech">
+						<span class="tech-tag">React</span>
+						<span class="tech-tag">Node.js</span>
+					</div>
+					<div class="project-links">
+						<a href="#" class="project-link">View Project →</a>
+						<a href="#" class="project-link">GitHub →</a>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="project-header">
+						<h3>Project Two</h3>
+						<span class="project-year">2024</span>
+					</div>
+					<p class="project-description">
+						An elegant solution to a complex problem. Built with performance
+						and user experience in mind.
+					</p>
+					<div class="project-tech">
+						<span class="tech-tag">Astro</span>
+						<span class="tech-tag">TypeScript</span>
+					</div>
+					<div class="project-links">
+						<a href="#" class="project-link">View Project →</a>
+						<a href="#" class="project-link">GitHub →</a>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="project-header">
+						<h3>Project Three</h3>
+						<span class="project-year">2023</span>
+					</div>
+					<p class="project-description">
+						A creative portfolio showcasing photography and design work with
+						smooth animations and transitions.
+					</p>
+					<div class="project-tech">
+						<span class="tech-tag">CSS</span>
+						<span class="tech-tag">JavaScript</span>
+					</div>
+					<div class="project-links">
+						<a href="#" class="project-link">View Project →</a>
+						<a href="#" class="project-link">GitHub →</a>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section class="section" id="contact">
+		<div class="container">
+			<h2 class="section-title">
+				<span class="prompt">$</span> get-in-touch
+			</h2>
+			<div class="contact-content">
+				<p class="contact-text">
+					I'm always open to new opportunities and collaborations. Feel free
+					to reach out!
+				</p>
+				<div class="contact-links">
+					<a href="mailto:your.email@example.com" class="contact-link">
+						📧 Email
+					</a>
+					<a href="https://github.com/yourusername" class="contact-link">
+						🐙 GitHub
+					</a>
+					<a href="https://linkedin.com/in/yourusername" class="contact-link">
+						💼 LinkedIn
+					</a>
+					<a href="https://twitter.com/yourusername" class="contact-link">
+						🐦 Twitter
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<p>© 2024 {name}. Built with Astro.</p>
+		</div>
+	</footer>
+</Layout>
