@@ -1,5 +1,4 @@
 ---
-// projects/index.astro - Individual project sections (no loop)
 import Layout from '../../layouts/Layout.astro';
 import {ExternalLink, Github, Instagram, Linkedin, Mail} from 'lucide-astro';
 
@@ -13,7 +12,7 @@ const name = "Bennett Logan";
             <a href="/" class="logo">Bennett Logan</a>
             <div class="nav-links">
                 <a href="/#about">About</a>
-                <a href="/projects">Projects</a>
+                <a href="/projects" class="active">Projects</a>
                 <a href="/contact">Contact</a>
             </div>
         </div>
@@ -22,7 +21,7 @@ const name = "Bennett Logan";
     <!-- Projects Container -->
     <main class="projects-container">
 
-        <!-- Project 1 - Has both live demo and GitHub -->
+        <!--Project 1, UI/UX Design-->
         <section class="project-section">
             <div class="project-background" style="background-image: url('/images/mountain.jpg')"></div>
 
@@ -45,25 +44,23 @@ const name = "Bennett Logan";
                     <div class="project-tech">
                         <span class="tech-badge">Figma</span>
                         <span class="tech-badge">AdobeExpress</span>
-                        <span class="tech-badge">MongoDB</span>
-                        <span class="tech-badge">Socket.io</span>
                     </div>
 
                     <div class="project-actions">
-                        <a href="https://project-one.com" class="project-btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <a href="https://new.express.adobe.com/webpage/eBDtQjVLGu0Na" class="project-btn btn-primary" target="_blank" rel="noopener noreferrer">
                             <ExternalLink size={18} />
-                            <span>View Live</span>
+                            <span>View Design</span>
                         </a>
-                        <a href="https://github.com/yourusername/project-one" class="project-btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                            <Github size={18} />
-                            <span>Source Code</span>
-                        </a>
+                        <!--<a href="https://github.com/yourusername/project-one" class="project-btn btn-secondary" target="_blank" rel="noopener noreferrer">-->
+                        <!--    <Github size={18} />-->
+                        <!--    <span>Source Code</span>-->
+                        <!--</a>-->
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Project 2 - Only has live demo, no GitHub -->
+        <!--Project 2, CatScript Compiler-->
         <section class="project-section">
             <div class="project-background" style="background-image: url('/images/mountain.jpg')"></div>
 
@@ -71,26 +68,29 @@ const name = "Bennett Logan";
                 <div class="project-info">
                     <div class="project-meta">
                         <span class="project-number">02</span>
-                        <span class="project-year">2024</span>
+                        <span class="project-year">2025</span>
                     </div>
 
-                    <h2 class="project-title">Client Project</h2>
+                    <h2 class="project-title">CatScript Compiler</h2>
 
                     <p class="project-description">
-                        A professional website built for a client. Clean design, fast performance, and optimized for conversions. Proprietary codebase.
+                        For my senior capstone project, I was tasked with building a compiler. This compiler was for the
+                        language we made, CatScript. The compiler utilizes a recursive descent parser which is not typically
+                        taught when learning compilers.
                     </p>
 
                     <div class="project-tech">
-                        <span class="tech-badge">Astro</span>
-                        <span class="tech-badge">TypeScript</span>
-                        <span class="tech-badge">Tailwind CSS</span>
+                        <span class="tech-badge">Java</span>
                     </div>
 
                     <div class="project-actions">
-                        <a href="https://client-project.com" class="project-btn btn-primary" target="_blank" rel="noopener noreferrer">
-                            <ExternalLink size={18} />
-                            <span>View Live</span>
-                        </a>
+                        <p class="project-note" style="color: var(--text-secondary); font-style: italic; margin-top: 1rem;">
+                            * Private project due to university policy. Contact me for source code
+                        </p>
+                        <!--<a href="#" class="project-btn btn-primary" target="_blank" rel="noopener noreferrer">-->
+                        <!--    <ExternalLink size={18} />-->
+                        <!--    <span>View Live</span>-->
+                        <!--</a>-->
                     </div>
                 </div>
             </div>
@@ -104,25 +104,27 @@ const name = "Bennett Logan";
                 <div class="project-info">
                     <div class="project-meta">
                         <span class="project-number">03</span>
-                        <span class="project-year">2023</span>
+                        <span class="project-year">2025</span>
                     </div>
 
-                    <h2 class="project-title">Open Source Library</h2>
+                    <h2 class="project-title">Photography Website</h2>
 
                     <p class="project-description">
-                        A utility library for JavaScript developers. Published on npm and actively maintained. Used by developers worldwide.
+                        My photography website to practice creating a content-rich static website. I learned about creating a large
+                        scale website with a lot of photos and contact forms. I also learned about opening up e-commerce
+                        by selling prints from the website
                     </p>
 
                     <div class="project-tech">
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">TypeScript</span>
-                        <span class="tech-badge">Jest</span>
+                        <span class="tech-badge">Astro</span>
+                        <span class="tech-badge">Stripe</span>
+                        <span class="tech-badge">PostgreSQL</span>
                     </div>
 
                     <div class="project-actions">
-                        <a href="https://github.com/yourusername/library" class="project-btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                            <Github size={18} />
-                            <span>Source Code</span>
+                        <a href="https://github.com/iforgotmylogin/MachineLearning" class="project-btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <ExternalLink size={18} />
+                            <span>Website</span>
                         </a>
                     </div>
                 </div>
@@ -137,26 +139,27 @@ const name = "Bennett Logan";
                 <div class="project-info">
                     <div class="project-meta">
                         <span class="project-number">04</span>
-                        <span class="project-year">2023</span>
+                        <span class="project-year">2024</span>
                     </div>
 
-                    <h2 class="project-title">Enterprise Dashboard</h2>
+                    <h2 class="project-title">Machine Learning Library</h2>
 
                     <p class="project-description">
-                        Internal tool for a Fortune 500 company. Real-time analytics dashboard processing millions of data points. Under NDA - cannot share code or demo.
+                        A library that has multiple different types of machine learning algorithms. This library is similar
+                        to Scikit-learn with equations and algorithms. This project was done for my university and done
+                        with a partner <a href="https://hunteradietzenbach.com">Hunter Dietzenbach</a>
                     </p>
 
                     <div class="project-tech">
-                        <span class="tech-badge">React</span>
-                        <span class="tech-badge">D3.js</span>
-                        <span class="tech-badge">GraphQL</span>
-                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">Python</span>
                     </div>
 
-                    <!-- No buttons for private projects -->
-                    <p class="project-note" style="color: var(--text-secondary); font-style: italic; margin-top: 1rem;">
-                        * Private project under NDA
-                    </p>
+                    <div class="project-actions">
+                        <a href="https://github.com/iforgotmylogin/MachineLearning" class="project-btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <Github size={18} />
+                            <span>Source Code</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
